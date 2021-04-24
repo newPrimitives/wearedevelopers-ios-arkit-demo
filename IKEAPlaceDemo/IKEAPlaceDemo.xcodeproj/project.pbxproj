@@ -18,6 +18,8 @@
 		558910FC2634A0E1002FFB40 /* FurnitureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558910FB2634A0E1002FFB40 /* FurnitureViewController.swift */; };
 		558911062634A4DF002FFB40 /* FurnitureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558911042634A4DF002FFB40 /* FurnitureTableViewCell.swift */; };
 		558911072634A4DF002FFB40 /* FurnitureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558911052634A4DF002FFB40 /* FurnitureTableViewCell.xib */; };
+		558911152634A75E002FFB40 /* FurnitureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558911142634A75E002FFB40 /* FurnitureService.swift */; };
+		5589111A2634A795002FFB40 /* Furniture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558911192634A795002FFB40 /* Furniture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		558910FB2634A0E1002FFB40 /* FurnitureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureViewController.swift; sourceTree = "<group>"; };
 		558911042634A4DF002FFB40 /* FurnitureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureTableViewCell.swift; sourceTree = "<group>"; };
 		558911052634A4DF002FFB40 /* FurnitureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FurnitureTableViewCell.xib; sourceTree = "<group>"; };
+		558911142634A75E002FFB40 /* FurnitureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureService.swift; sourceTree = "<group>"; };
+		558911192634A795002FFB40 /* Furniture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Furniture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				558911042634A4DF002FFB40 /* FurnitureTableViewCell.swift */,
 				558911052634A4DF002FFB40 /* FurnitureTableViewCell.xib */,
 				558910D32634A03B002FFB40 /* Info.plist */,
+				558911142634A75E002FFB40 /* FurnitureService.swift */,
+				558911192634A795002FFB40 /* Furniture.swift */,
 			);
 			path = IKEAPlaceDemo;
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 				558910CA2634A037002FFB40 /* ViewController.swift in Sources */,
 				558910FC2634A0E1002FFB40 /* FurnitureViewController.swift in Sources */,
 				558911062634A4DF002FFB40 /* FurnitureTableViewCell.swift in Sources */,
+				558911152634A75E002FFB40 /* FurnitureService.swift in Sources */,
+				5589111A2634A795002FFB40 /* Furniture.swift in Sources */,
 				558910C62634A037002FFB40 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

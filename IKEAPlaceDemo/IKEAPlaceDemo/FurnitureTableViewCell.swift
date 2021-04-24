@@ -13,15 +13,10 @@ class FurnitureTableViewCell: UITableViewCell {
     @IBOutlet weak var furnitureTitle: UILabel!
     @IBOutlet weak var stockLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setup(with furniture: Furniture) {
+        furniturePreview.image = UIImage(named: furniture.image)!
+        furnitureTitle.text = furniture.name
+        stockLabel.text = "\(furniture.stock) in stock"
     }
     
 }
