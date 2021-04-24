@@ -22,11 +22,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+       // Show more data on the screen
+        sceneView.debugOptions = [
+            .showWorldOrigin,
+            .showFeaturePoints
+        ]
         
-        // Set the scene to the view
-        sceneView.scene = scene
+        sceneView.autoenablesDefaultLighting = true
+        drawShpereAtOrigin()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,5 +73,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
+    }
+    
+    // MARK: Custom functions
+    
+    func drawShpereAtOrigin() {
+        // Create a blank shphere
+        let sphere = SCNNode(geometry: SCNSphere(radius: 0.05))
+        
+        // Add color to the sphhere to difuse object
+        sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+        
+        // If you want color to be affected by the light add specular
+        sphere.geometry?.firstMaterial?.specular.contents = UIColor.white
+        
+        // Add the shape to the origin
+        sphere.position = SCNVector3(0, 0, 0)
+        
+        // Add the shape as the child of the rootNode
+        sceneView.scene.rootNode.addChildNode(sphere)
     }
 }
