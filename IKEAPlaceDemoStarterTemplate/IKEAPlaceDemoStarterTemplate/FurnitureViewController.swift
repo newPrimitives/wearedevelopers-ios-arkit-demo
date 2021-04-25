@@ -40,6 +40,10 @@ extension FurnitureViewController: UITableViewDelegate {
         
         // Save the selected furniture to local storage so we can retrieve it in SceneKit
         service.saveActiveFurnitureToLocalStorage(with: selectedFurniture.id)
+        
+        let alert = UIAlertController(title: "Success", message: "Added \(selectedFurniture.name) as active furniture", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

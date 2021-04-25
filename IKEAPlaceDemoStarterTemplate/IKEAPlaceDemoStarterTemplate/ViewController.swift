@@ -11,7 +11,10 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    @IBOutlet weak var activeFurniture: UILabel!
     @IBOutlet var sceneView: ARSCNView!
+    
+    private let furnitureService = FurnitureService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/chair.scn")!
+        let scene = SCNScene(named: "art.scnassets/ship.scn")!
         
         // Set the scene to the view
         sceneView.scene = scene
@@ -31,6 +34,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if let furniture = furnitureService.getActiveFurnitureFromLocalStorage() {
+            activeFurniture.text = furniture.name
+        }
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
