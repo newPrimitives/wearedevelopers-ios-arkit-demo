@@ -27,4 +27,22 @@ class FurnitureService {
             )
         ]
     }
+    
+    func saveActiveFurnitureToLocalStorage(with id: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(id, forKey: "activeFurnitureId")
+    }
+    
+    func getActiveFurnitureFromLocalStorage() -> Furniture? {
+        let defaults = UserDefaults.standard
+        guard
+            let activeFurnitureId = defaults.string(forKey: "activeFurnitureId"),
+            let id = Int(activeFurnitureId),
+            let furniture = getAllFurniture().first(where: {$0.id == id})
+        else {
+            return nil
+        }
+        
+        return furniture
+    }
 }
