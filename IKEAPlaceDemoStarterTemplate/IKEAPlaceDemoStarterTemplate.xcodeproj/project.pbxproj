@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		558910C22634A037002FFB40 /* IKEAPlaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKEAPlaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		558910C22634A037002FFB40 /* IKEAPlaceDemoStarterTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKEAPlaceDemoStarterTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558910C52634A037002FFB40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		558910C72634A037002FFB40 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		558910C92634A037002FFB40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,10 +48,10 @@
 		558910CE2634A03A002FFB40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558910D12634A03B002FFB40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		558910D32634A03B002FFB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		558910D82634A03B002FFB40 /* IKEAPlaceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKEAPlaceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		558910D82634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKEAPlaceDemoStarterTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558910DC2634A03B002FFB40 /* IKEAPlaceDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKEAPlaceDemoTests.swift; sourceTree = "<group>"; };
 		558910DE2634A03B002FFB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		558910E32634A03B002FFB40 /* IKEAPlaceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKEAPlaceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		558910E32634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKEAPlaceDemoStarterTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558910E72634A03B002FFB40 /* IKEAPlaceDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKEAPlaceDemoUITests.swift; sourceTree = "<group>"; };
 		558910E92634A03B002FFB40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558910FB2634A0E1002FFB40 /* FurnitureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureViewController.swift; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		558910B92634A037002FFB40 = {
 			isa = PBXGroup;
 			children = (
-				558910C42634A037002FFB40 /* IKEAPlaceDemo */,
-				558910DB2634A03B002FFB40 /* IKEAPlaceDemoTests */,
-				558910E62634A03B002FFB40 /* IKEAPlaceDemoUITests */,
+				558910C42634A037002FFB40 /* IKEAPlaceDemoStarterTemplate */,
+				558910DB2634A03B002FFB40 /* IKEAPlaceDemoTestsStarterTemplate */,
+				558910E62634A03B002FFB40 /* IKEAPlaceDemoUITestsStarterTemplate */,
 				558910C32634A037002FFB40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,14 +99,14 @@
 		558910C32634A037002FFB40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				558910C22634A037002FFB40 /* IKEAPlaceDemo.app */,
-				558910D82634A03B002FFB40 /* IKEAPlaceDemoTests.xctest */,
-				558910E32634A03B002FFB40 /* IKEAPlaceDemoUITests.xctest */,
+				558910C22634A037002FFB40 /* IKEAPlaceDemoStarterTemplate.app */,
+				558910D82634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateTests.xctest */,
+				558910E32634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		558910C42634A037002FFB40 /* IKEAPlaceDemo */ = {
+		558910C42634A037002FFB40 /* IKEAPlaceDemoStarterTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				558910C52634A037002FFB40 /* AppDelegate.swift */,
@@ -121,25 +121,25 @@
 				558911142634A75E002FFB40 /* FurnitureService.swift */,
 				558911192634A795002FFB40 /* Furniture.swift */,
 			);
-			path = IKEAPlaceDemo;
+			path = IKEAPlaceDemoStarterTemplate;
 			sourceTree = "<group>";
 		};
-		558910DB2634A03B002FFB40 /* IKEAPlaceDemoTests */ = {
+		558910DB2634A03B002FFB40 /* IKEAPlaceDemoTestsStarterTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				558910DC2634A03B002FFB40 /* IKEAPlaceDemoTests.swift */,
 				558910DE2634A03B002FFB40 /* Info.plist */,
 			);
-			path = IKEAPlaceDemoTests;
+			path = IKEAPlaceDemoTestsStarterTemplate;
 			sourceTree = "<group>";
 		};
-		558910E62634A03B002FFB40 /* IKEAPlaceDemoUITests */ = {
+		558910E62634A03B002FFB40 /* IKEAPlaceDemoUITestsStarterTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				558910E72634A03B002FFB40 /* IKEAPlaceDemoUITests.swift */,
 				558910E92634A03B002FFB40 /* Info.plist */,
 			);
-			path = IKEAPlaceDemoUITests;
+			path = IKEAPlaceDemoUITestsStarterTemplate;
 			sourceTree = "<group>";
 		};
 		558911032634A4C0002FFB40 /* Resources */ = {
@@ -154,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		558910C12634A037002FFB40 /* IKEAPlaceDemo */ = {
+		558910C12634A037002FFB40 /* IKEAPlaceDemoStarterTemplate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 558910EC2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemo" */;
+			buildConfigurationList = 558910EC2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoStarterTemplate" */;
 			buildPhases = (
 				558910BE2634A037002FFB40 /* Sources */,
 				558910BF2634A037002FFB40 /* Frameworks */,
@@ -166,14 +166,14 @@
 			);
 			dependencies = (
 			);
-			name = IKEAPlaceDemo;
+			name = IKEAPlaceDemoStarterTemplate;
 			productName = IKEAPlaceDemo;
-			productReference = 558910C22634A037002FFB40 /* IKEAPlaceDemo.app */;
+			productReference = 558910C22634A037002FFB40 /* IKEAPlaceDemoStarterTemplate.app */;
 			productType = "com.apple.product-type.application";
 		};
-		558910D72634A03B002FFB40 /* IKEAPlaceDemoTests */ = {
+		558910D72634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 558910EF2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoTests" */;
+			buildConfigurationList = 558910EF2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoStarterTemplateTests" */;
 			buildPhases = (
 				558910D42634A03B002FFB40 /* Sources */,
 				558910D52634A03B002FFB40 /* Frameworks */,
@@ -184,14 +184,14 @@
 			dependencies = (
 				558910DA2634A03B002FFB40 /* PBXTargetDependency */,
 			);
-			name = IKEAPlaceDemoTests;
+			name = IKEAPlaceDemoStarterTemplateTests;
 			productName = IKEAPlaceDemoTests;
-			productReference = 558910D82634A03B002FFB40 /* IKEAPlaceDemoTests.xctest */;
+			productReference = 558910D82634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		558910E22634A03B002FFB40 /* IKEAPlaceDemoUITests */ = {
+		558910E22634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 558910F22634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoUITests" */;
+			buildConfigurationList = 558910F22634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoStarterTemplateUITests" */;
 			buildPhases = (
 				558910DF2634A03B002FFB40 /* Sources */,
 				558910E02634A03B002FFB40 /* Frameworks */,
@@ -202,9 +202,9 @@
 			dependencies = (
 				558910E52634A03B002FFB40 /* PBXTargetDependency */,
 			);
-			name = IKEAPlaceDemoUITests;
+			name = IKEAPlaceDemoStarterTemplateUITests;
 			productName = IKEAPlaceDemoUITests;
-			productReference = 558910E32634A03B002FFB40 /* IKEAPlaceDemoUITests.xctest */;
+			productReference = 558910E32634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 558910BD2634A037002FFB40 /* Build configuration list for PBXProject "IKEAPlaceDemo" */;
+			buildConfigurationList = 558910BD2634A037002FFB40 /* Build configuration list for PBXProject "IKEAPlaceDemoStarterTemplate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -242,9 +242,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				558910C12634A037002FFB40 /* IKEAPlaceDemo */,
-				558910D72634A03B002FFB40 /* IKEAPlaceDemoTests */,
-				558910E22634A03B002FFB40 /* IKEAPlaceDemoUITests */,
+				558910C12634A037002FFB40 /* IKEAPlaceDemoStarterTemplate */,
+				558910D72634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateTests */,
+				558910E22634A03B002FFB40 /* IKEAPlaceDemoStarterTemplateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,12 +313,12 @@
 /* Begin PBXTargetDependency section */
 		558910DA2634A03B002FFB40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 558910C12634A037002FFB40 /* IKEAPlaceDemo */;
+			target = 558910C12634A037002FFB40 /* IKEAPlaceDemoStarterTemplate */;
 			targetProxy = 558910D92634A03B002FFB40 /* PBXContainerItemProxy */;
 		};
 		558910E52634A03B002FFB40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 558910C12634A037002FFB40 /* IKEAPlaceDemo */;
+			target = 558910C12634A037002FFB40 /* IKEAPlaceDemoStarterTemplate */;
 			targetProxy = 558910E42634A03B002FFB40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -471,7 +471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tershouse.IKEAPlaceDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = tershouse.IKEAPlaceDemoStarterTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -490,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tershouse.IKEAPlaceDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = tershouse.IKEAPlaceDemoStarterTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -515,7 +515,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKEAPlaceDemo.app/IKEAPlaceDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKEAPlaceDemoStarterTemplate.app/IKEAPlaceDemoStarterTemplate";
 			};
 			name = Debug;
 		};
@@ -537,7 +537,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKEAPlaceDemo.app/IKEAPlaceDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKEAPlaceDemoStarterTemplate.app/IKEAPlaceDemoStarterTemplate";
 			};
 			name = Release;
 		};
@@ -584,7 +584,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		558910BD2634A037002FFB40 /* Build configuration list for PBXProject "IKEAPlaceDemo" */ = {
+		558910BD2634A037002FFB40 /* Build configuration list for PBXProject "IKEAPlaceDemoStarterTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				558910EA2634A03B002FFB40 /* Debug */,
@@ -593,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		558910EC2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemo" */ = {
+		558910EC2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoStarterTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				558910ED2634A03B002FFB40 /* Debug */,
@@ -602,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		558910EF2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoTests" */ = {
+		558910EF2634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoStarterTemplateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				558910F02634A03B002FFB40 /* Debug */,
@@ -611,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		558910F22634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoUITests" */ = {
+		558910F22634A03B002FFB40 /* Build configuration list for PBXNativeTarget "IKEAPlaceDemoStarterTemplateUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				558910F32634A03B002FFB40 /* Debug */,
