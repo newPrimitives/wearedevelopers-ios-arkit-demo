@@ -11,5 +11,12 @@ Table of contents
    * [Presentation](https://github.com/newPrimitives/wearedevelopers-ios-arkit-demo/blob/main/Introduction%20to%20ARKIT%20-%20WeAreDevelopers%20iOS%20Day.pdf)
 <!--te-->
 
+## Release History
+
+| Branch                                                                                  | Version | Release Date |
+| --------------------------------------------------------------------------------------- |:-------:|:------------:|
+| [versions/1.0](https://github.com/newPrimitives/wearedevelopers-ios-arkit-demo/tree/main) | 1.0     | 2021-26-04 |
+
+
 
 

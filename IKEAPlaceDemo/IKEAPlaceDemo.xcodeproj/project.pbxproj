@@ -130,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				559417BA2637560C0093208B /* FurnitureViewController.swift */,
+				559417C72637560C0093208B /* SceneViewController.swift */,
 				559417BB2637560C0093208B /* Furniture.swift */,
 				559417BC2637560C0093208B /* Resources */,
 				559417C02637560C0093208B /* LaunchScreen.storyboard */,
@@ -137,7 +138,6 @@
 				559417C42637560C0093208B /* FurnitureTableViewCell.swift */,
 				559417C52637560C0093208B /* FurnitureTableViewCell.xib */,
 				559417C62637560C0093208B /* FurnitureService.swift */,
-				559417C72637560C0093208B /* SceneViewController.swift */,
 				559417C82637560C0093208B /* AppDelegate.swift */,
 				559417C92637560C0093208B /* Info.plist */,
 			);

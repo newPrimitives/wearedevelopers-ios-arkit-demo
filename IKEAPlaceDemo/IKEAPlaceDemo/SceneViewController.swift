@@ -11,11 +11,15 @@ import ARKit
 
 class SceneViewController: UIViewController {
 
+    // MARK: Outlet connections
     @IBOutlet weak var activeFurniture: UILabel!
     @IBOutlet var sceneView: ARSCNView!
     
+    // MARK: Services
     private let furnitureService = FurnitureService()
     
+    
+    // MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,6 +71,8 @@ class SceneViewController: UIViewController {
         }
     }
     
+    // MARK: Gesture recognizers
+    
     func initGestureRecognizers() {
       let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapOnScreen))
       sceneView.addGestureRecognizer(tapGestureRecognizer)
@@ -88,6 +94,8 @@ class SceneViewController: UIViewController {
 }
 
 extension SceneViewController: ARSCNViewDelegate{
+    
+    // MARK: ARKit delegate methods
     
     // This function gets called automatically each time tracking stauts in ARKit changes
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
@@ -120,26 +128,10 @@ extension SceneViewController: ARSCNViewDelegate{
         }
           
         print("Found a plane")
+        
         // we have a horizontal plane, aka piece of floor is detected where we can place furniture
         // Now we'll draw the grid on the floor for each detected plane
         drawPlane(on: node, for: planeAnchor)
-    }
-    
-    private func drawPlane(on node: SCNNode, for anchor: ARPlaneAnchor) {
-        
-        if anchor.alignment == .horizontal {
-            let planeNode = SCNNode(geometry: SCNPlane(
-                width: CGFloat(anchor.extent.x),
-                height: 1)
-            )
-            
-            planeNode.position = SCNVector3(anchor.center.x, anchor.center.y, anchor.center.z)
-            planeNode.geometry?.firstMaterial?.isDoubleSided = true
-            planeNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "grid")
-            planeNode.eulerAngles = SCNVector3(-Double.pi / 2, 0, 0)
-            planeNode.name = "horizontal"
-            node.addChildNode(planeNode)
-        }
     }
     
     // ARKit delegate method that gets called each time when the information for an existing node anchor get updated
@@ -176,18 +168,59 @@ extension SceneViewController: ARSCNViewDelegate{
         })
     }
     
+    
+    // MARK: Custom drawing methods
+    
+    private func drawPlane(on node: SCNNode, for anchor: ARPlaneAnchor) {
+        
+        // For the purpose of this demo we only focus on horizontal planes
+        // If you want to hang pictures you need the same logic for vertical planes
+        if anchor.alignment == .horizontal {
+            let planeNode = SCNNode(geometry: SCNPlane(
+                width: CGFloat(anchor.extent.x),
+                height: 1)
+            )
+            
+            // Define the position of the "grid" node
+            planeNode.position = SCNVector3(anchor.center.x, anchor.center.y, anchor.center.z)
+            
+            // Make sure the image is applied to both sides of the node
+            planeNode.geometry?.firstMaterial?.isDoubleSided = true
+            
+            // Add image from Assets as the grid
+            planeNode.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "grid")
+            
+            // Flip the node by 90 so it's flat based on the floor position
+            planeNode.eulerAngles = SCNVector3(-Double.pi / 2, 0, 0)
+            
+            // Give it an appropriate name
+            planeNode.name = "horizontal"
+            
+            // Add the node as a child
+            node.addChildNode(planeNode)
+        }
+    }
+    
+    
     func addFurniture(at hitResult: ARRaycastResult) {
+        
+        // We get the coordinates from the hit test and transform them to 3D world
         let transform = hitResult.worldTransform
         let positionColum = transform.columns.3
         let initialPosition = SCNVector3(positionColum.x, positionColum.y, positionColum.z)
         
+        // We check to see if there's any active furniture selected
         guard let currentFurniture = furnitureService.getActiveFurnitureFromLocalStorage() else {
             return
         }
         
+        // We construct the scene based on the model reference
         let scene = SCNScene(named: "Models.scnassets/\(currentFurniture.modelReference)/\(currentFurniture.modelReference).scn")!
+        
+        // Create the node from the scene
         let node = (scene.rootNode.childNode(withName: currentFurniture.modelReference, recursively: false))!
 
+        // We apply material and texture to make the model more realistis
         let plateMaterial = SCNMaterial()
         plateMaterial.lightingModel = .physicallyBased
         plateMaterial.normal.contents = UIImage(named: "Models.scnassets/\(currentFurniture.modelReference)/textures/\(currentFurniture.texture)")
@@ -196,7 +229,11 @@ extension SceneViewController: ARSCNViewDelegate{
         plateMaterial.metalness.contents = 0.8
         plateMaterial.roughness.contents = 0.2
         node.geometry?.firstMaterial = plateMaterial
+        
+        // We give the node the position we calulated from the hit test
         node.position = initialPosition
+        
+        // We add the node to the scene
         sceneView.scene.rootNode.addChildNode(node)
     }
 }
