@@ -22,7 +22,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-       // Show more data on the screen
+        // Show more data on the screen
         sceneView.debugOptions = [
             .showWorldOrigin,
             .showFeaturePoints
