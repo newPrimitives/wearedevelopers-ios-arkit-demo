@@ -18,7 +18,6 @@ class SceneViewController: UIViewController {
     // MARK: Services
     private let furnitureService = FurnitureService()
     
-    
     // MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,12 +79,12 @@ class SceneViewController: UIViewController {
 
     @objc func didTapOnScreen(sender: UITapGestureRecognizer) {
         let location = sender.location(in: sceneView)
-        guard let query = sceneView.raycastQuery(from: location, allowing: .existingPlaneInfinite, alignment: .any) else {
+        guard let query = sceneView.raycastQuery(from: location, allowing: .estimatedPlane, alignment: .horizontal) else {
            return
         }
                 
         let results = sceneView.session.raycast(query)
-        guard let hitTestResult = results.first else {
+        guard let hitTestResult = results.last else {
            return
         }
         
@@ -200,7 +199,6 @@ extension SceneViewController: ARSCNViewDelegate{
             node.addChildNode(planeNode)
         }
     }
-    
     
     func addFurniture(at hitResult: ARRaycastResult) {
         
